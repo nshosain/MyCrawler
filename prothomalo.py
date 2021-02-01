@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 
 #takes article url
-print('Enter Prothom Alo URL (En): ')
+print('Enter Prothom Alo URL (Bn): ')
 article = input()
 
 #gets url
@@ -20,7 +20,7 @@ tme = soup.find('div', attrs={'class': 'storyPageMetaData-m__publish-time__19bdV
 time = tme.text
 
 #gets author of the article
-athr = soup.find('span', attrs={'class': 'contributor-name contributor-m__contributor-name__1-593 contributor-m__en-contributor-name__1DI3K'})
+athr = soup.find('span', attrs={'class': 'contributor-name contributor-m__contributor-name__1-593'})
 author = athr.text
 
 #gets body of the article
